@@ -2,7 +2,7 @@ import bcrypt from "bcryptjs";
 
 import User from "../../models/user.model.js";
 
-export const signup = async (req, res) => {
+const signup = async (req, res) => {
   try {
     const { fullName, username, password, confirmedPassword, gender } =
       req.body;
@@ -59,3 +59,5 @@ export const signup = async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
+
+export default signup;

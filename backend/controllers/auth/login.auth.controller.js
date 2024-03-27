@@ -1,3 +1,5 @@
-export const login = (req, res) => {
+const login = (req, res) => {
   res.send("Login route");
 };
+
+export default login;
