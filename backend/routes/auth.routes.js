@@ -1,4 +1,5 @@
 import express from "express";
+
 import signup from "../controllers/auth/signup.auth.controller.js";
 import login from "../controllers/auth/login.auth.controller.js";
 import logout from "../controllers/auth/logout.auth.controller.js";
