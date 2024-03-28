@@ -44,14 +44,14 @@ const signup = async (req, res) => {
     });
 
     if (!newUser) {
-      res.status(400).json({ error: "Invalid user data" });
+      return res.status(400).json({ error: "Invalid user data" });
     }
 
     generateTokenAndSetCookie(newUser._id, res);
 
     await newUser.save();
 
-    res.status(201).json({
+    return res.status(201).json({
       _id: newUser._id,
       fullName: newUser.fullName,
       username: newUser.username,
