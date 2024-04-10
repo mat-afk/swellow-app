@@ -58,8 +58,8 @@ const signup = async (req, res) => {
       profilePicture: newUser.profilePicture,
     });
   } catch (error) {
-    console.log("Error in signup controller: " + error.message);
-    res.status(500).json({ error: "Internal Server Error" });
+    console.error("Error in signup controller: " + error.message);
+    res.status(500).json({ error: "Internal server error" });
   }
 };
 

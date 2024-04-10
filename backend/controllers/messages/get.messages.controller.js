@@ -15,8 +15,8 @@ const getMessages = async (req, res) => {
 
     res.status(200).json(conversation.messages);
   } catch (error) {
-    console.log("Error in getMessages controller: " + error.message);
-    res.status(500).json({ error: "Internal Server Error" });
+    console.error("Error in getMessages controller: " + error.message);
+    res.status(500).json({ error: "Internal server error" });
   }
 };
 
