@@ -3,7 +3,7 @@ const Login = () => {
     <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
       <div className="w-full p-8 rounded-lg shadow-md bg-zinc-100 bg-clip-padding backdrop-filter">
         <h1 className="text-3xl font-semibold text-center text-zinc-900 m-4">
-          Log in <span className="text-amber-500">Swellow</span>
+          Log in <span className="text-yellow-400">Swellow</span>
         </h1>
 
         <form>
