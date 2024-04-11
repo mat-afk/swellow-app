@@ -9,7 +9,7 @@ const Login = () => {
         <form>
           <div className="mt-4">
             <label className="label p-2">
-              <span className="text-base label-text font-semibold">
+              <span className="text-sm label-text font-semibold">
                 Username
               </span>
             </label>
@@ -21,7 +21,7 @@ const Login = () => {
           </div>
           <div className="mt-2">
             <label className="label">
-              <span className="text-base label-text font-semibold">
+              <span className="text-sm label-text font-semibold">
                 Password
               </span>
             </label>
@@ -40,7 +40,7 @@ const Login = () => {
           </a>
 
           <div>
-            <button className="btn btn-block bg-yellow-400 hover:bg-yellow-500 btn-md font-semibold mt-6">
+            <button className="btn btn-block bg-yellow-400 hover:bg-yellow-500 btn-md font-semibold text-base mt-6">
               Login
             </button>
           </div>
