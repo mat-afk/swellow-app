@@ -55,9 +55,9 @@ const SignUp = () => {
           </div>
 
           <div className="flex mt-2">
-            <GenderCheckBox gender="Male" />
-            <GenderCheckBox gender="Female" />
-            <GenderCheckBox gender="Non-binary" />
+            <GenderCheckBox>Male</GenderCheckBox>
+            <GenderCheckBox>Female</GenderCheckBox>
+            <GenderCheckBox>Non binary</GenderCheckBox>
           </div>
 
           <a
