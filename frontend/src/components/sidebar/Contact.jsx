@@ -1,4 +1,4 @@
-const Conversation = () => {
+const Contact = () => {
   return (
     <>
       <div className="flex gap-2 items-center rounded hover:bg-yellow-400 p-2 py-1 cursor-pointer">
@@ -23,4 +23,4 @@ const Conversation = () => {
   );
 };
 
-export default Conversation;
+export default Contact;
