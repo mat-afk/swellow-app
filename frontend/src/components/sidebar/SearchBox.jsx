@@ -6,9 +6,9 @@ const SearchBox = () => {
       <input
         type="text"
         placeholder="Search..."
-        className="input input-bordered rounded-full"
+        className="input input-bordered rounded-full bg-white"
       />
-      <button type="submit" className="btn btn-circle bg-yellow-400 text-white">
+      <button type="submit" className="btn btn-circle bg-yellow-400 hover:bg-yellow-300 text-white">
         <IoSearchSharp className="w-6 h-6 outline-none" />
       </button>
     </form>
