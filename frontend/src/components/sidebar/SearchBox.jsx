@@ -1,17 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoSearchSharp } from "react-icons/io5";
 import useContacts from "../../hooks/useContacts";
-import toast from "react-hot-toast";
 
 const SearchBox = () => {
   const [targetContact, setTargetContact] = useState("");
 
   const { contacts, setContacts } = useContacts();
 
-  const search = (e) => {
-    e.preventDefault();
+  useEffect(() => {
+    search();
+  }, [targetContact]);
 
-    setTargetContact(e.target.value);
+  const search = (e) => {
+    if (e) e.preventDefault();
 
     contacts.map((c) => {
       if (c.fullName.toLowerCase().includes(targetContact.toLowerCase())) {

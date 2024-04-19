@@ -5,7 +5,7 @@ const ContactsList = () => {
   const { loading, contacts } = useContacts();
 
   return (
-    <div className="py-3 flex flex-col overflow-auto">
+    <div className="flex flex-col overflow-auto">
       {contacts.map((contact, index) => (
         <div key={contact._id} className={`${contact.display}`}>
           <Contact
