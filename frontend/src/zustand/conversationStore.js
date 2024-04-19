@@ -6,4 +6,6 @@ export const conversationStore = create((set) => ({
     set({ selectedConversation }),
   messages: [],
   setMessages: (messages) => set({ messages }),
+  contacts: [],
+  setContacts: (contacts) => set({ contacts }),
 }));

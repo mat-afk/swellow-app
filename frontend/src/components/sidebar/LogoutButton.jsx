@@ -4,7 +4,7 @@ import useLogout from "../../hooks/useLogout";
 const LogoutButton = () => {
   const { loading, logout } = useLogout();
   return (
-    <div className="mt-3">
+    <div className="mt-auto">
       {loading ? (
         <span className="loading loading-spinner"></span>
       ) : (

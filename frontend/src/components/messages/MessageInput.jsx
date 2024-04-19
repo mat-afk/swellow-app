@@ -3,7 +3,7 @@ import useConversation from "../../hooks/useConversation";
 import { useState } from "react";
 
 const MessageInput = () => {
-  const [message, setMessage] = useState();
+  const [message, setMessage] = useState("");
 
   const { loading, sendMessage } = useConversation();
 

@@ -1,7 +1,7 @@
 import { conversationStore } from "../../zustand/conversationStore";
 
-const Contact = ({ contact, emoji, isLastIndex }) => {
-  const { fullName, profilePicture } = contact;
+const Contact = ({ contact, isLastIndex }) => {
+  const { fullName, profilePicture, emoji } = contact;
 
   const { selectedConversation, setSelectedConversation } = conversationStore();
 
