@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import { conversationStore } from "../zustand/conversationStore";
+import { getRandomEmoji } from "../utils/emojis";
 
 const useContacts = () => {
   const [loading, setLoading] = useState(false);
-  const [contacts, setContacts] = useState([]);
+
+  const { contacts, setContacts } = conversationStore();
 
   useEffect(() => {
     const getContacts = async () => {
@@ -17,6 +20,11 @@ const useContacts = () => {
           throw new Error(data.error);
         }
 
+        data.map((item) => {
+          item.emoji = getRandomEmoji();
+          item.display = "";
+        });
+
         setContacts(data);
       } catch (error) {
         toast.error(error.message);
@@ -28,7 +36,7 @@ const useContacts = () => {
     getContacts();
   }, []);
 
-  return { loading, contacts };
+  return { loading, contacts, setContacts };
 };
 
 export default useContacts;

@@ -3,7 +3,7 @@ import useConversation from "../../hooks/useConversation";
 import { useState } from "react";
 
 const MessageInput = () => {
-  const [message, setMessage] = useState();
+  const [message, setMessage] = useState("");
 
   const { loading, sendMessage } = useConversation();
 
@@ -21,7 +21,7 @@ const MessageInput = () => {
       <div className="w-full relative">
         <input
           type="text"
-          className="border text-sm rounded-lg w-full p-2.5 text-zinc-900 border-slate-300 bg-white"
+          className="input h-11 border text-sm rounded-lg w-full p-2.5 text-zinc-900 border-slate-300 bg-white"
           placeholder="Send a message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}

@@ -16,6 +16,7 @@ const Message = ({ message }) => {
   const profilePicture = isFromMe
     ? authUser.profilePicture
     : contact.profilePicture;
+  const shakeClassName = message.shouldShake ? "shake" : "";
 
   return (
     <div className={`chat ${messagePositionClassName}`}>
@@ -24,7 +25,9 @@ const Message = ({ message }) => {
           <img src={profilePicture} alt="User avatar" />
         </div>
       </div>
-      <div className={`chat-bubble text-zinc-900 ${messageColorClassName}`}>
+      <div
+        className={`chat-bubble break-words text-zinc-900 ${messageColorClassName} ${shakeClassName}`}
+      >
         {text}
       </div>
       <div className="chat-footer opacity-50 text-xs flex gap-1 items-center">
