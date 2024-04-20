@@ -16,6 +16,8 @@ export const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
+      // For development: http://localhost:5000
+      // For build: https://swellow-app.onrender.com/
       const socket = io("https://swellow-app.onrender.com/", {
         query: {
           userId: authUser._id,

@@ -19,6 +19,7 @@ const useConversation = () => {
         newMessage.shouldShake = true;
 
         const sound = new Audio(notificationSound);
+        sound.volume = 0.1
         sound.play();
 
         setMessages([...messages, newMessage]);
